@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Варіант 15</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-areas:
+                "block1 block5 blockX"
+                "block1 block5 block3"
+                "block4 block5 blockY";
+            grid-template-rows: 1fr 2fr 1fr;
+            grid-template-columns: 1fr 50px 3fr;
+            gap: 5px;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .block1 { 
+            grid-area: block1; 
+            background-color: #ffe4c4; 
+            padding: 10px; 
+            text-align: left; 
+        }
+        .block1 ul {
+            list-style: none;
+            padding: 0;
+        }
+        .block1 ul li {
+            margin: 5px 0;
+        }
+        .block1 ul li a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+        .blockX { 
+            grid-area: blockX; 
+            background-color: #ffffff; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            font-weight: bold; 
+            font-size: 20px; 
+        }
+        .block2 { 
+            grid-area: blockX; 
+            background-color: #add8e6; 
+            padding: 10px; 
+            position: relative; 
+            text-align: right; 
+        }
+        .block3 { 
+            grid-area: block3; 
+            background-color: #ffffff; 
+            padding: 10px; 
+            text-align: center; 
+        }
+        .block4 { 
+            grid-area: block4; 
+            background-color: #98fb98; 
+            padding: 10px; 
+            text-align: center; 
+        }
+        .block5 { 
+            grid-area: block5; 
+            background-color: #ffffff; 
+            padding: 10px; 
+            text-align: center; 
+        }
+        .blockY { 
+            grid-area: blockY; 
+            background-color: #add8e6; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: flex-start; 
+            align-items: flex-start; 
+            padding: 20px; 
+            position: relative; 
+        }
+        .small-window {
+            position: absolute;
+            width: 100px;
+            height: 40px;
+            background-color: #ffffff;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+        .blockX .small-window { top: 10px; left: 10px; }
+        .blockY .small-window { bottom: 10px; right: 10px; }
+        h1 {
+            margin: 0 0 10px;
+        }
+        p {
+            margin: 0 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="block1">
+        <h1>Меню</h1>
+        <ul>
+            <li><a href="#food">Їжа для тварин</a></li>
+            <li><a href="#toys">Іграшки</a></li>
+            <li><a href="#accessories">Аксесуари</a></li>
+            <li><a href="#care">Засоби догляду</a></li>
+            <li><a href="#contact">Контакти</a></li>
+        </ul>
+    </div>
+    <div class="block2">
+        <h1 id="food">Магазин для тварин</h1></h1>
+        <p>Широкий вибір товарів для котів, собак, гризунів та інших домашніх улюбленців.</p>
+        <div class="small-window">Мяу</div>
+    </div>
+    <div class="block3">
+        <h1 id="toys">Про нас</h1>
+        <p>Наш магазин для тварин – це місце, де ви знайдете все необхідне для ваших домашніх улюбленців. Ми пропонуємо широкий асортимент товарів, починаючи від якісного корму для котів, собак, гризунів та птахів, і закінчуючи аксесуарами, які зроблять життя ваших друзів комфортнішим. У нас ви зможете знайти м’які іграшки, інтерактивні забавки, нашийники, повідки та багато іншого.</p>
+        <p>Ми піклуємося про здоров’я та щастя ваших тварин, тому обираємо лише надійних постачальників і якісну продукцію. Якщо ви шукаєте поради або допомогу у виборі товарів, наші спеціалісти завжди готові вас проконсультувати. Завітайте до нашого магазину та переконайтесь, що ми є вашим найкращим партнером у догляді за улюбленцями!</p>
+    </div>
+    <div class="block4">
+        <h1 id="accessories">Аксесуари</h1>
+        <p>Нашийники, повідки, миски та інші корисні товари для ваших улюбленців.</p>
+    </div>
+    <div class="blockY">
+        <h1 id="contact">Контакти</h1>
+        <p>Телефон: 123-456-7890</p>
+        <p>Електронна пошта: info@petshop.com</p>
+        <div class="small-window">Гав</div> 
+    </div>
+</body>
+</html>
